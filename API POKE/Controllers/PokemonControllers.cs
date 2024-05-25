@@ -1,8 +1,8 @@
 ﻿using NLayer.Architecture.Bussines.Models;
-using NLayer.Architecture.Bussines;
 using Microsoft.AspNetCore.Mvc;
 using System.Globalization;
 using System.Xml.Linq;
+using NLayer.Architecture.Bussines.Services;
 
 namespace MiPokemonFavorito.Controllers
 {
@@ -19,20 +19,6 @@ namespace MiPokemonFavorito.Controllers
             this.pokemonServices = pokemonServices;
         }
 
-        [HttpGet(Name = "PokeAPI")]
-        public async Task<IActionResult> GetPokemon(string name)
-        {
-            try
-            {
-                var pokemon = await pokemonServices.GetPokemonAsync(name);
-                return Ok(pokemon);
-            }
-            catch
-            {
-                return NotFound();
-            }
-        }
-
         [HttpGet("eevee")]
         public async Task<IActionResult> GetEevee()
         {
@@ -46,5 +32,20 @@ namespace MiPokemonFavorito.Controllers
                 return NotFound();
             }
         }
+
+        [HttpGet(Name = "PokeAPI")]
+        public async Task<IActionResult> GetPokemon(string name)
+        {
+            try
+            {
+                var pokemon = await pokemonServices.GetPokemonAsync(name);
+                return Ok(pokemon);
+            }
+            catch
+            {
+                return NotFound();
+            }
+        }
     }
 }
+//

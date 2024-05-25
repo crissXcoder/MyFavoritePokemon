@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json.Linq;
-using NLayer.Architecture.Bussines.Models;
+using NLayer.Architecture.Bussines.Models.Models;
 
-namespace NLayer.Architecture.Bussines
+namespace NLayer.Architecture.Bussines.Services
 {
     public class PokemonService
     {
@@ -31,3 +31,4 @@ namespace NLayer.Architecture.Bussines
         }
     }
 }
+//
