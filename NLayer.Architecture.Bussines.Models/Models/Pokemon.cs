@@ -1,4 +1,4 @@
-﻿namespace NLayer.Architecture.Bussines.Models
+﻿namespace NLayer.Architecture.Bussines.Models.Models
 {
     public class Pokemon
     {
@@ -8,3 +8,4 @@
         public List<string> Movimientos { get; set; }
     }
 }
+//
